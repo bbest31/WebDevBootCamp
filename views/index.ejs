@@ -1,0 +1,13 @@
+<% include partials/header %>
+<% marines.forEach(function(marine){%>
+    <div>
+        <h2><%=marine.title%></h2>
+        <img src="<%=marine.image%>">
+        <span><%=marine.created %></span>
+        <p><%=marine.body.substring(0,100)%>...</p>
+        <a href="/space_marines/<%= marine._id%>">Read More</a>
+    </div>
+<% })%>
+
+
+<% include partials/footer %>

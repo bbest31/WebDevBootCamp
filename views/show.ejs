@@ -1,0 +1,22 @@
+<% include partials/header %>
+<div class="ui main text container">
+    <div class="ui huge header"><%=marine.title %></div>
+    <div class="ui top attached segment">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%=marine.image%>">
+            <div class="content">
+                <span><%=marine.created.toDateString() %></span>
+            </div>
+            <div class="description">
+                <p><%-marine.body%></p>
+            </div>
+            <a class="ui blue basic button" href="/space_marines/<%=marine._id%>/edit">Edit</a>
+            <form id="delete" method="POST" action="/space_marines/<%=marine._id%>?_method=DELETE">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+        
+    </div>
+    
+</div>
+<% include partials/footer %>

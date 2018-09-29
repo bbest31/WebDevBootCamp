@@ -1,0 +1,10 @@
+<% include partials/header %>
+
+        <h1>You have pledged your allegiance to the <%=marineChapter%></h1>
+
+        <% if(marineChapter.toLowerCase() === "grey_knights"){ %>
+            <p>We are the Hammer!</p>
+        <% } else { %>
+            <p>Praise the Emperor!!</p>
+        <% } %>        
+<% include partials/footer %>
