@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align:center;">Edit <%=world.name %></h1>
+        <div style="width:30%; margin: 25px auto;">
+             <form action="/worlds/<%=world._id %>?_method=PUT" method="POST">
+                 <div class="form-group">
+                     <input class="form-control" type="text" name="world[name]" value="<%=world.name %>">
+                 </div>
+                 <div class="form-group">
+                     <input class="form-control" type="text" name="world[image]" value="<%=world.image %>">
+                 </div>
+                  <div class="form-group">
+                     <input class="form-control" type="text" name="world[desc]" value="<%=world.desc %>">
+                 </div>
+                 <div class="form-group">
+                     <input class="btn btn-block btn-lg btn-primary"type="submit">
+                 </div>
+        </form>
+         <a href="/worlds">Go Back</a>
+        </div>
+     </div>
+</div>
+<% include ../partials/footer %>

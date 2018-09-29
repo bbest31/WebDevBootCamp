@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align:center;">Record a New World</h1>
+        <div style="width:30%; margin: 25px auto;">
+             <form action="/worlds" method="POST">
+                 <div class="form-group">
+                     <input class="form-control" type="text" name="name" placeholder="planet name">
+                 </div>
+                 <div class="form-group">
+                     <input class="form-control" type="text" name="image" placeholder="vox image url">
+                 </div>
+                  <div class="form-group">
+                     <input class="form-control" type="text" name="desc" placeholder="description">
+                 </div>
+                 <div class="form-group">
+                     <input class="btn btn-block btn-lg btn-primary"type="submit">
+                 </div>
+        </form>
+         <a href="/worlds">Go Back</a>
+        </div>
+     </div>
+</div>
+<% include ../partials/footer %>
